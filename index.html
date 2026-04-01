@@ -48,43 +48,110 @@
     top: 0;
     z-index: 100;
   }
-  header h1 { font-size: 20px; font-weight: 800; letter-spacing: -0.5px; color: var(--text); }
+  header h1 {
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: var(--text);
+  }
   header h1 span { color: var(--accent); }
   .header-actions { display: flex; gap: 8px; }
-  button { font-family: 'Syne', sans-serif; cursor: pointer; border: none; outline: none; }
+  button {
+    font-family: 'Syne', sans-serif;
+    cursor: pointer;
+    border: none;
+    outline: none;
+  }
   .btn {
-    background: var(--bg4); color: var(--text); border: 1px solid var(--border2);
-    border-radius: var(--radius); padding: 8px 14px; font-size: 13px; font-weight: 600; transition: all 0.15s;
+    background: var(--bg4);
+    color: var(--text);
+    border: 1px solid var(--border2);
+    border-radius: var(--radius);
+    padding: 8px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.15s;
   }
   .btn:hover { background: var(--bg3); border-color: var(--accent); color: var(--accent); }
-  .btn-accent { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .btn-accent {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+  }
   .btn-accent:hover { background: var(--accent2); border-color: var(--accent2); color: #fff; }
-  .btn-green { background: var(--green2); color: #fff; border-color: var(--green2); }
+  .btn-green {
+    background: var(--green2);
+    color: #fff;
+    border-color: var(--green2);
+  }
   .btn-green:hover { background: var(--green); border-color: var(--green); color: #000; }
   .btn-sm { padding: 5px 10px; font-size: 12px; }
   .btn-danger { border-color: var(--red2); color: var(--red); }
   .btn-danger:hover { background: var(--red2); color: #fff; }
   .container { max-width: 960px; margin: 0 auto; padding: 24px 16px; }
   .tabs {
-    display: flex; gap: 4px; background: var(--bg2); border: 1px solid var(--border);
-    border-radius: var(--radius-lg); padding: 4px; margin-bottom: 24px;
+    display: flex;
+    gap: 4px;
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 4px;
+    margin-bottom: 24px;
   }
   .tab {
-    flex: 1; background: transparent; color: var(--text2); border: none; border-radius: var(--radius);
-    padding: 10px 8px; font-size: 13px; font-weight: 600; transition: all 0.15s; cursor: pointer;
+    flex: 1;
+    background: transparent;
+    color: var(--text2);
+    border: none;
+    border-radius: var(--radius);
+    padding: 10px 8px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.15s;
+    cursor: pointer;
     font-family: 'Syne', sans-serif;
   }
-  .tab.active { background: var(--accent); color: #fff; }
+  .tab.active {
+    background: var(--accent);
+    color: #fff;
+  }
   .tab:not(.active):hover { background: var(--bg3); color: var(--text); }
   .section { display: none; }
   .section.active { display: block; }
-  .card { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 20px; margin-bottom: 16px; }
-  .card-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
-  .card-title { font-size: 14px; font-weight: 600; color: var(--text2); text-transform: uppercase; letter-spacing: 1px; }
-  .meter-grid { display: grid; gap: 12px; }
+  .card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 20px;
+    margin-bottom: 16px;
+  }
+  .card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+  .card-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text2);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .meter-grid {
+    display: grid;
+    gap: 12px;
+  }
   .meter-row {
-    display: grid; grid-template-columns: 1fr auto auto; align-items: center; gap: 12px;
-    background: var(--bg3); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 16px; transition: border-color 0.15s;
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    gap: 12px;
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 14px 16px;
+    transition: border-color 0.15s;
   }
   .meter-row:hover { border-color: var(--border2); }
   .meter-row.type-production { border-left: 3px solid var(--green); }
@@ -92,70 +159,241 @@
   .meter-row.type-main-production { border-left: 3px solid var(--amber); }
   .meter-row.type-main-consumption { border-left: 3px solid var(--cyan); }
   .meter-info { display: flex; flex-direction: column; gap: 4px; }
-  .meter-name { font-size: 15px; font-weight: 600; color: var(--text); display: flex; align-items: center; gap: 8px; }
-  .meter-type-badge { font-size: 10px; font-weight: 600; padding: 2px 7px; border-radius: 20px; letter-spacing: 0.5px; }
+  .meter-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .meter-type-badge {
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px 7px;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+  }
   .badge-production { background: #1a3d2e; color: var(--green); }
   .badge-consumption { background: #2a2050; color: var(--accent); }
   .badge-main-production { background: #3d2e0a; color: var(--amber); }
   .badge-main-consumption { background: #0a3d3d; color: var(--cyan); }
   .badge-sub { background: #2a2a3a; color: var(--text2); }
-  .meter-reading { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text3); }
-  .meter-input-wrap { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }
-  .meter-input-row { display: flex; align-items: center; gap: 6px; }
-  input[type="number"], input[type="text"], input[type="date"], input[type="file"] {
-    background: var(--bg4); border: 1px solid var(--border2); border-radius: var(--radius); color: var(--text);
-    font-family: 'JetBrains Mono', monospace; font-size: 14px; padding: 8px 10px; transition: border-color 0.15s; outline: none;
+  .meter-reading {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--text3);
   }
-  input[type="number"], input[type="text"], input[type="date"] { width: 130px; }
-  input[type="file"] { font-family: 'Syne', sans-serif; font-size: 13px; width: 100%; cursor: pointer; }
-  input[type="number"]:focus, input[type="text"]:focus, input[type="date"]:focus { border-color: var(--accent); }
+  .meter-input-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+  }
+  .meter-input-row { display: flex; align-items: center; gap: 6px; }
+  input[type="number"], input[type="text"], input[type="date"] {
+    background: var(--bg4);
+    border: 1px solid var(--border2);
+    border-radius: var(--radius);
+    color: var(--text);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    padding: 8px 10px;
+    transition: border-color 0.15s;
+    outline: none;
+    width: 130px;
+  }
+  input[type="number"]:focus, input[type="text"]:focus, input[type="date"]:focus {
+    border-color: var(--accent);
+  }
+  input[type="number"].wide, input[type="text"].wide { width: 200px; }
   .meter-unit { font-size: 12px; color: var(--text3); font-family: 'JetBrains Mono', monospace; }
-  .meter-delta { font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 500; white-space: nowrap; }
+  .meter-delta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    font-weight: 500;
+    white-space: nowrap;
+  }
   .delta-pos { color: var(--green); }
   .delta-neg { color: var(--red); }
   .delta-zero { color: var(--text3); }
-  .date-picker-row { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; flex-wrap: wrap; }
+  .date-picker-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
   .date-picker-row label { font-size: 14px; color: var(--text2); font-weight: 600; }
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  .stat-card {
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 14px 16px;
+  }
+  .stat-label { font-size: 11px; font-weight: 600; color: var(--text3); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+  .stat-value { font-family: 'JetBrains Mono', monospace; font-size: 22px; font-weight: 700; color: var(--text); }
+  .stat-value.green { color: var(--green); }
+  .stat-value.amber { color: var(--amber); }
+  .stat-value.cyan { color: var(--cyan); }
+  .stat-unit { font-size: 12px; color: var(--text3); margin-top: 2px; font-family: 'JetBrains Mono', monospace; }
   .table-wrap { overflow-x: auto; border-radius: var(--radius); border: 1px solid var(--border); }
   table { width: 100%; border-collapse: collapse; font-size: 13px; }
-  th { background: var(--bg3); color: var(--text2); font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.8px; padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); }
-  td { padding: 10px 14px; border-bottom: 1px solid var(--border); color: var(--text); font-family: 'JetBrains Mono', monospace; font-size: 13px; }
+  th {
+    background: var(--bg3);
+    color: var(--text2);
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    padding: 10px 14px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+  }
+  td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+  }
   tr:last-child td { border-bottom: none; }
   tr:hover td { background: var(--bg3); }
   .td-name { font-family: 'Syne', sans-serif; font-weight: 600; font-size: 13px; }
   .td-pos { color: var(--green); }
   .td-neg { color: var(--red); }
-  .empty-state { text-align: center; padding: 48px 24px; color: var(--text3); font-size: 15px; }
+  .empty-state {
+    text-align: center;
+    padding: 48px 24px;
+    color: var(--text3);
+    font-size: 15px;
+  }
   .empty-state strong { display: block; font-size: 18px; margin-bottom: 8px; color: var(--text2); }
-  .modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.7); z-index: 1000; display: flex; align-items: center; justify-content: center; padding: 16px; }
-  .modal { background: var(--bg2); border: 1px solid var(--border2); border-radius: var(--radius-lg); padding: 24px; width: 100%; max-width: 480px; max-height: 90vh; overflow-y: auto; }
+  .modal-overlay {
+    position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.7);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+  }
+  .modal {
+    background: var(--bg2);
+    border: 1px solid var(--border2);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    width: 100%;
+    max-width: 480px;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
   .modal h2 { font-size: 18px; font-weight: 800; margin-bottom: 20px; }
   .form-group { margin-bottom: 16px; }
   .form-group label { display: block; font-size: 13px; font-weight: 600; color: var(--text2); margin-bottom: 6px; }
-  .form-group input, .form-group select { width: 100%; background: var(--bg4); border: 1px solid var(--border2); border-radius: var(--radius); color: var(--text); font-family: 'Syne', sans-serif; font-size: 14px; padding: 10px 12px; outline: none; }
+  .form-group input, .form-group select {
+    width: 100%;
+    background: var(--bg4);
+    border: 1px solid var(--border2);
+    border-radius: var(--radius);
+    color: var(--text);
+    font-family: 'Syne', sans-serif;
+    font-size: 14px;
+    padding: 10px 12px;
+    outline: none;
+  }
   .form-group select { cursor: pointer; }
   .form-group input:focus, .form-group select:focus { border-color: var(--accent); }
   .form-actions { display: flex; gap: 8px; justify-content: flex-end; margin-top: 20px; }
+  .meter-actions { display: flex; gap: 6px; align-items: center; }
   .manage-list { display: flex; flex-direction: column; gap: 8px; }
-  .manage-item { display: flex; align-items: center; justify-content: space-between; background: var(--bg3); border: 1px solid var(--border); border-radius: var(--radius); padding: 12px 16px; }
+  .manage-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 12px 16px;
+  }
   .manage-item-info { display: flex; flex-direction: column; gap: 4px; }
   .manage-item-name { font-size: 14px; font-weight: 600; }
   .manage-item-type { font-size: 12px; color: var(--text3); }
-  .toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); background: var(--bg4); border: 1px solid var(--green2); color: var(--green); padding: 10px 20px; border-radius: var(--radius); font-size: 13px; font-weight: 600; z-index: 9999; opacity: 0; transition: opacity 0.3s; pointer-events: none; }
+  .import-area {
+    width: 100%;
+    background: var(--bg4);
+    border: 1px solid var(--border2);
+    border-radius: var(--radius);
+    color: var(--text);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    padding: 12px;
+    resize: vertical;
+    min-height: 120px;
+    outline: none;
+  }
+  .import-area:focus { border-color: var(--accent); }
+  .toast {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--bg4);
+    border: 1px solid var(--green2);
+    color: var(--green);
+    padding: 10px 20px;
+    border-radius: var(--radius);
+    font-size: 13px;
+    font-weight: 600;
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+  }
   .toast.show { opacity: 1; }
   .chart-bar-wrap { margin-top: 16px; }
-  .chart-bar-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; font-size: 12px; }
+  .chart-bar-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    font-size: 12px;
+  }
   .chart-bar-label { width: 70px; text-align: right; color: var(--text2); flex-shrink: 0; font-family: 'JetBrains Mono', monospace; }
   .chart-bar-track { flex: 1; background: var(--bg4); border-radius: 4px; height: 20px; overflow: hidden; }
   .chart-bar-fill { height: 100%; border-radius: 4px; transition: width 0.4s ease; display: flex; align-items: center; padding-left: 8px; font-size: 11px; font-weight: 600; font-family: 'JetBrains Mono', monospace; }
   .fill-cons { background: linear-gradient(90deg, var(--accent2), var(--accent)); color: #fff; }
   .fill-prod { background: linear-gradient(90deg, var(--green2), var(--green)); color: #000; }
-  .section-title { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; color: var(--text3); margin: 20px 0 10px; }
+  .section-title {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text3);
+    margin: 20px 0 10px;
+  }
   .divider { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
-  select { background: var(--bg4); border: 1px solid var(--border2); border-radius: var(--radius); color: var(--text); font-family: 'Syne', sans-serif; font-size: 13px; padding: 8px 10px; outline: none; cursor: pointer; }
+  select {
+    background: var(--bg4);
+    border: 1px solid var(--border2);
+    border-radius: var(--radius);
+    color: var(--text);
+    font-family: 'Syne', sans-serif;
+    font-size: 13px;
+    padding: 8px 10px;
+    outline: none;
+    cursor: pointer;
+  }
   select:focus { border-color: var(--accent); }
   @media (max-width: 600px) {
     .meter-row { grid-template-columns: 1fr; }
+    .stats-grid { grid-template-columns: 1fr 1fr; }
     .header-actions { gap: 4px; }
     .btn { padding: 7px 10px; font-size: 12px; }
   }
@@ -166,19 +404,20 @@
 <header>
   <h1>⚡ Licznik <span>Prądu</span></h1>
   <div class="header-actions">
-    <button class="btn" onclick="openManage()">Zarządzaj</button>
+    <button class="btn" onclick="openManage()">Zarządzaj licznikami</button>
     <button class="btn" onclick="openExport()">Eksport / Import</button>
   </div>
 </header>
 
 <div class="container">
   <div class="tabs">
-    <button class="tab active" onclick="switchTab(event, 'wpis')">Dzienny wpis</button>
-    <button class="tab" onclick="switchTab(event, 'historia')">Historia dni</button>
-    <button class="tab" onclick="switchTab(event, 'tygodnie')">Tygodniowo</button>
-    <button class="tab" onclick="switchTab(event, 'miesiace')">Miesięcznie</button>
+    <button class="tab active" onclick="switchTab('wpis')">Dzienny wpis</button>
+    <button class="tab" onclick="switchTab('historia')">Historia dni</button>
+    <button class="tab" onclick="switchTab('tygodnie')">Tygodniowo</button>
+    <button class="tab" onclick="switchTab('miesiace')">Miesięcznie</button>
   </div>
 
+  <!-- TAB: WPIS -->
   <div id="tab-wpis" class="section active">
     <div class="date-picker-row">
       <label for="date-input">Data wpisu:</label>
@@ -186,18 +425,22 @@
       <button class="btn btn-sm" onclick="setToday()">Dziś</button>
       <button class="btn btn-accent" onclick="saveEntry()">💾 Zapisz wpis</button>
     </div>
+
     <div id="meters-wpis"></div>
   </div>
 
+  <!-- TAB: HISTORIA -->
   <div id="tab-historia" class="section">
     <div class="card">
       <div class="card-header">
         <span class="card-title">Historia wpisów</span>
+        <button class="btn btn-sm btn-danger" onclick="clearConfirm()">🗑 Wyczyść wszystko</button>
       </div>
       <div id="historia-table"></div>
     </div>
   </div>
 
+  <!-- TAB: TYGODNIE -->
   <div id="tab-tygodnie" class="section">
     <div class="card">
       <div class="card-header"><span class="card-title">Podsumowanie tygodniowe</span></div>
@@ -205,6 +448,7 @@
     </div>
   </div>
 
+  <!-- TAB: MIESIACE -->
   <div id="tab-miesiace" class="section">
     <div class="card">
       <div class="card-header"><span class="card-title">Podsumowanie miesięczne</span></div>
@@ -214,6 +458,7 @@
   </div>
 </div>
 
+<!-- MODAL: ZARZĄDZAJ -->
 <div id="modal-manage" class="modal-overlay" style="display:none;">
   <div class="modal">
     <h2>Zarządzaj licznikami</h2>
@@ -240,29 +485,25 @@
   </div>
 </div>
 
+<!-- MODAL: EKSPORT/IMPORT -->
 <div id="modal-export" class="modal-overlay" style="display:none;">
   <div class="modal">
     <h2>Eksport / Import danych</h2>
-    
     <p class="section-title">Eksport</p>
-    <div style="margin-bottom:20px;">
-      <button class="btn btn-green" onclick="exportDataJSON()" style="width:100%;">📦 Pobierz plik JSON (Kopia zapasowa)</button>
+    <div style="display:flex;gap:8px;margin-bottom:20px;">
+      <button class="btn btn-green" onclick="exportData('json')">📦 Eksportuj JSON</button>
+      <button class="btn" onclick="exportData('txt')">📄 Eksportuj TXT</button>
     </div>
-    
-    <hr class="divider">
-    
-    <p class="section-title">Import z pliku</p>
-    <div class="form-group">
-      <label>Wybierz plik JSON z wcześniej zapisanymi danymi:</label>
-      <input type="file" id="import-file" accept=".json">
-    </div>
+    <p class="section-title">Import (wklej JSON)</p>
+    <textarea class="import-area" id="import-area" placeholder='Wklej tutaj wcześniej wyeksportowane dane JSON...'></textarea>
     <div class="form-actions">
       <button class="btn" onclick="closeModal('modal-export')">Zamknij</button>
-      <button class="btn btn-accent" onclick="importDataFromFile()">📥 Wgraj dane</button>
+      <button class="btn btn-accent" onclick="importData()">📥 Importuj dane</button>
     </div>
   </div>
 </div>
 
+<!-- MODAL: EDYTUJ LICZNIK -->
 <div id="modal-edit" class="modal-overlay" style="display:none;">
   <div class="modal">
     <h2>Edytuj licznik</h2>
@@ -282,13 +523,19 @@
 <script>
 const STORAGE_KEY = 'licznik_pradu_v2';
 
-let state = { meters: [], entries: {} };
+let state = {
+  meters: [],
+  entries: {}
+};
 
 const DEFAULT_METERS = [
   { id: 'm1', name: 'Zużycie główne', type: 'main-consumption' },
   { id: 'm2', name: 'Wprowadzenie z paneli', type: 'main-production' },
   { id: 'm3', name: 'Podlicznik zużycia 1', type: 'consumption' },
-  { id: 'm4', name: 'Podlicznik wprowadzenia 1', type: 'production' },
+  { id: 'm4', name: 'Podlicznik zużycia 2', type: 'consumption' },
+  { id: 'm5', name: 'Podlicznik zużycia 3', type: 'consumption' },
+  { id: 'm6', name: 'Podlicznik wprowadzenia 1', type: 'production' },
+  { id: 'm7', name: 'Podlicznik wprowadzenia 2', type: 'production' },
 ];
 
 function loadState() {
@@ -312,7 +559,9 @@ function saveState() {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
 }
 
-function getToday() { return new Date().toISOString().slice(0,10); }
+function getToday() {
+  return new Date().toISOString().slice(0,10);
+}
 
 function fmtKwh(val) {
   if (val === null || val === undefined || isNaN(val)) return '—';
@@ -335,7 +584,9 @@ function typeBadge(type) {
   return `<span class="meter-type-badge ${cls}">${label}</span>`;
 }
 
-function typeClass(type) { return 'type-' + (type || 'consumption'); }
+function typeClass(type) {
+  return 'type-' + (type || 'consumption');
+}
 
 function getPrevValue(meterId, date) {
   const dates = Object.keys(state.entries).filter(d => d < date).sort();
@@ -363,14 +614,16 @@ function renderWpis() {
 
   const groups = [
     { label: 'Liczniki główne', types: ['main-consumption','main-production'] },
-    { label: 'Podliczniki', types: ['consumption', 'production'] }
+    { label: 'Podliczniki zużycia', types: ['consumption'] },
+    { label: 'Podliczniki wprowadzenia', types: ['production'] },
   ];
 
   let html = '';
   for (const g of groups) {
     const meters = state.meters.filter(m => g.types.includes(m.type));
     if (meters.length === 0) continue;
-    html += `<div class="section-title">${g.label}</div><div class="meter-grid">`;
+    html += `<div class="section-title">${g.label}</div>`;
+    html += `<div class="meter-grid">`;
     for (const m of meters) {
       const val = entry[m.id] !== undefined ? entry[m.id] : '';
       const prev = getPrevValue(m.id, date);
@@ -390,7 +643,7 @@ function renderWpis() {
           <div>${deltaHtml}</div>
           <div class="meter-input-wrap">
             <div class="meter-input-row">
-              <input type="number" step="0.01" placeholder="Wpisz stan" value="${val}"
+              <input type="number" step="0.01" placeholder="np. 75913" value="${val}"
                 id="inp-${m.id}" onchange="updateInput('${m.id}')" oninput="updateInput('${m.id}')">
               <span class="meter-unit">kWh</span>
             </div>
@@ -399,6 +652,7 @@ function renderWpis() {
     }
     html += `</div>`;
   }
+
   container.innerHTML = html;
 }
 
@@ -412,6 +666,8 @@ function updateInput(meterId) {
   const inp = document.getElementById('inp-' + meterId);
   if (!inp) return;
   const row = inp.closest('.meter-row');
+  if (!row) return;
+  const deltaEl = row.querySelector('.meter-delta');
   const wrapEl = row.querySelector('.meter-input-wrap').previousElementSibling;
 
   const cur = val !== '' ? Number(val) : null;
@@ -419,7 +675,8 @@ function updateInput(meterId) {
     const delta = cur - prev;
     const cls = delta > 0 ? 'delta-pos' : delta < 0 ? 'delta-neg' : 'delta-zero';
     const sign = delta > 0 ? '+' : '';
-    wrapEl.innerHTML = `<span class="meter-delta ${cls}">${sign}${fmtKwh(delta)}</span>`;
+    const newHtml = `<span class="meter-delta ${cls}">${sign}${fmtKwh(delta)}</span>`;
+    wrapEl.innerHTML = newHtml;
   } else {
     wrapEl.innerHTML = '';
   }
@@ -450,35 +707,34 @@ function renderHistoria() {
 
   let html = '<div class="table-wrap"><table><thead><tr><th>Data</th>';
   for (const m of state.meters) html += `<th>${m.name}</th>`;
-  html += '<th>Całkowite Zużycie (Główne)</th><th>Całkowite Wprowadz. (Główne)</th></tr></thead><tbody>';
+  html += '<th title="Tylko liczniki główne — podliczniki to fragmenty, nie dodają się do sumy">Zużycie główne ⓘ</th><th title="Tylko liczniki główne — podliczniki to fragmenty, nie dodają się do sumy">Wprow. główne ⓘ</th></tr></thead><tbody>';
 
   for (const date of dates) {
     const entry = state.entries[date] || {};
     html += `<tr><td class="td-name">${date}</td>`;
-    
-    let totalMainCons = 0, totalMainProd = 0;
-    let hasMainCons = false, hasMainProd = false;
-    
+    let totalCons = 0, totalProd = 0;
+    let hasCons = false, hasProd = false;
     for (const m of state.meters) {
       const delta = getDelta(m.id, date);
       if (delta !== null) {
         const cls = delta > 0 ? 'td-pos' : delta < 0 ? 'td-neg' : '';
         const sign = delta > 0 ? '+' : '';
-        html += `<td class="${cls}">${fmtReading(entry[m.id])}<br><small style="color:var(--text3)">${sign}${Number(delta).toFixed(2)}</small></td>`;
-        
-        // SUMOWANIE TYLKO DLA GŁÓWNYCH LICZNIKÓW
-        if (m.type === 'main-consumption') { totalMainCons += delta; hasMainCons = true; }
-        if (m.type === 'main-production') { totalMainProd += delta; hasMainProd = true; }
+        const isSub = m.type === 'consumption' || m.type === 'production';
+        html += `<td class="${cls}" style="${isSub ? 'opacity:0.7' : ''}">${fmtReading(entry[m.id])}<br><small style="color:var(--text3)">${sign}${Number(delta).toFixed(2)}</small></td>`;
+        // Suma tylko z liczników GŁÓWNYCH — podliczniki są fragmentem głównego, nie dodajemy ich
+        if (m.type === 'main-consumption') { totalCons += delta; hasCons = true; }
+        if (m.type === 'main-production')  { totalProd += delta; hasProd = true; }
       } else {
         const v = entry[m.id];
         html += `<td>${v !== undefined ? fmtReading(v) : '—'}</td>`;
       }
     }
-    html += `<td class="td-pos">${hasMainCons ? fmtKwh(totalMainCons) : '—'}</td>`;
-    html += `<td style="color:var(--amber)">${hasMainProd ? fmtKwh(totalMainProd) : '—'}</td>`;
+    html += `<td class="td-pos">${hasCons ? fmtKwh(totalCons) : '—'}</td>`;
+    html += `<td style="color:var(--amber)">${hasProd ? fmtKwh(totalProd) : '—'}</td>`;
     html += '</tr>';
   }
   html += '</tbody></table></div>';
+  html += '<p style="font-size:11px;color:var(--text3);padding:10px 4px;">ⓘ Sumy obejmują tylko liczniki główne. Podliczniki (przyciemnione) to fragmenty zużycia głównego — ich dodawanie powodowałoby podwójne liczenie.</p>';
   container.innerHTML = html;
 }
 
@@ -496,16 +752,24 @@ function aggregatePeriod(periodFn) {
   const dates = Object.keys(state.entries).sort();
   for (const date of dates) {
     const key = periodFn(date);
-    if (!result[key]) result[key] = { dates: [], cons: {}, prod: {} };
+    if (!result[key]) result[key] = { dates: [], mainCons: {}, mainProd: {}, subCons: {}, subProd: {} };
     result[key].dates.push(date);
     for (const m of state.meters) {
       const delta = getDelta(m.id, date);
       if (delta === null) continue;
-      if (m.type === 'main-consumption' || m.type === 'consumption') {
-        result[key].cons[m.id] = (result[key].cons[m.id] || 0) + delta;
+      // Główne liczniki — to są "prawdziwe" sumy
+      if (m.type === 'main-consumption') {
+        result[key].mainCons[m.id] = (result[key].mainCons[m.id] || 0) + delta;
       }
-      if (m.type === 'main-production' || m.type === 'production') {
-        result[key].prod[m.id] = (result[key].prod[m.id] || 0) + delta;
+      if (m.type === 'main-production') {
+        result[key].mainProd[m.id] = (result[key].mainProd[m.id] || 0) + delta;
+      }
+      // Podliczniki — tylko do podglądu, NIE dodajemy do sumy głównej
+      if (m.type === 'consumption') {
+        result[key].subCons[m.id] = (result[key].subCons[m.id] || 0) + delta;
+      }
+      if (m.type === 'production') {
+        result[key].subProd[m.id] = (result[key].subProd[m.id] || 0) + delta;
       }
     }
   }
@@ -519,23 +783,16 @@ function renderPeriodTable(data, container, labelFn) {
     return;
   }
 
-  // Obliczanie maxów tylko na podstawie głównych liczników dla poprawnego skalowania pasków
-  const maxCons = Math.max(0, ...keys.map(k => Object.keys(data[k].cons).filter(id => state.meters.find(m => m.id === id && m.type === 'main-consumption')).reduce((a,id)=>a+data[k].cons[id],0)));
-  const maxProd = Math.max(0, ...keys.map(k => Object.keys(data[k].prod).filter(id => state.meters.find(m => m.id === id && m.type === 'main-production')).reduce((a,id)=>a+data[k].prod[id],0)));
+  const maxCons = Math.max(0, ...keys.map(k => Object.values(data[k].mainCons).reduce((a,b)=>a+b,0)));
+  const maxProd = Math.max(0, ...keys.map(k => Object.values(data[k].mainProd).reduce((a,b)=>a+b,0)));
 
   let html = '';
   for (const key of keys) {
     const d = data[key];
-    
-    // Sumy całkowite OPIERAJĄ SIĘ TYLKO NA GŁÓWNYCH LICZNIKACH
-    let totalConsMain = 0;
-    for (let id in d.cons) if (state.meters.find(m => m.id === id && m.type === 'main-consumption')) totalConsMain += d.cons[id];
-    
-    let totalProdMain = 0;
-    for (let id in d.prod) if (state.meters.find(m => m.id === id && m.type === 'main-production')) totalProdMain += d.prod[id];
-
-    const consPct = maxCons ? (totalConsMain/maxCons*100).toFixed(1) : 0;
-    const prodPct = maxProd ? (totalProdMain/maxProd*100).toFixed(1) : 0;
+    const totalCons = Object.values(d.mainCons).reduce((a,b)=>a+b,0);
+    const totalProd = Object.values(d.mainProd).reduce((a,b)=>a+b,0);
+    const consPct = maxCons ? (totalCons/maxCons*100).toFixed(1) : 0;
+    const prodPct = maxProd ? (totalProd/maxProd*100).toFixed(1) : 0;
     const label = labelFn(key, d.dates);
 
     html += `<div style="background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius);padding:14px 16px;margin-bottom:10px;">`;
@@ -546,34 +803,53 @@ function renderPeriodTable(data, container, labelFn) {
 
     html += `<div class="chart-bar-wrap">`;
     html += `<div class="chart-bar-row">
-      <span class="chart-bar-label">Zużycie<br><small>(główne)</small></span>
+      <span class="chart-bar-label">Zużycie</span>
       <div class="chart-bar-track">
-        <div class="chart-bar-fill fill-cons" style="width:${consPct}%">${totalConsMain > 0 ? fmtKwh(totalConsMain) : ''}</div>
+        <div class="chart-bar-fill fill-cons" style="width:${consPct}%">${totalCons > 0 ? fmtKwh(totalCons) : ''}</div>
       </div>
     </div>`;
     html += `<div class="chart-bar-row">
-      <span class="chart-bar-label">Panele<br><small>(główne)</small></span>
+      <span class="chart-bar-label">Panele</span>
       <div class="chart-bar-track">
-        <div class="chart-bar-fill fill-prod" style="width:${prodPct}%">${totalProdMain > 0 ? fmtKwh(totalProdMain) : ''}</div>
+        <div class="chart-bar-fill fill-prod" style="width:${prodPct}%">${totalProd > 0 ? fmtKwh(totalProd) : ''}</div>
       </div>
     </div>`;
     html += `</div>`;
 
-    // Tutaj pokazujemy wszystkie poszczególne liczniki z danego okresu (w tym podliczniki, by mieć ich wgląd)
-    const consMeterIds = Object.keys(d.cons);
-    const prodMeterIds = Object.keys(d.prod);
-    if (consMeterIds.length > 0 || prodMeterIds.length > 0) {
-      html += `<div style="margin-top:10px;display:flex;flex-wrap:wrap;gap:8px;">`;
-      for (const mid of consMeterIds) {
+    // Szczegóły liczników głównych (jeśli więcej niż 1)
+    const mainConsIds = Object.keys(d.mainCons);
+    const mainProdIds = Object.keys(d.mainProd);
+    if (mainConsIds.length > 1 || mainProdIds.length > 1) {
+      html += `<div style="margin-top:10px;display:flex;flex-wrap:wrap;gap:6px;">`;
+      for (const mid of mainConsIds) {
         const m = state.meters.find(x=>x.id===mid);
-        if (m) html += `<span style="font-size:11px;background:var(--bg4);border:1px solid var(--border);border-radius:6px;padding:3px 8px;font-family:'JetBrains Mono',monospace">${m.name}: <span style="color:var(--accent)">${fmtKwh(d.cons[mid])}</span></span>`;
+        if (m) html += `<span style="font-size:11px;background:var(--bg4);border:1px solid var(--border);border-radius:6px;padding:3px 8px;font-family:'JetBrains Mono',monospace">${m.name}: <span style="color:var(--accent)">${fmtKwh(d.mainCons[mid])}</span></span>`;
       }
-      for (const mid of prodMeterIds) {
+      for (const mid of mainProdIds) {
         const m = state.meters.find(x=>x.id===mid);
-        if (m) html += `<span style="font-size:11px;background:var(--bg4);border:1px solid var(--border);border-radius:6px;padding:3px 8px;font-family:'JetBrains Mono',monospace">${m.name}: <span style="color:var(--amber)">${fmtKwh(d.prod[mid])}</span></span>`;
+        if (m) html += `<span style="font-size:11px;background:var(--bg4);border:1px solid var(--border);border-radius:6px;padding:3px 8px;font-family:'JetBrains Mono',monospace">${m.name}: <span style="color:var(--amber)">${fmtKwh(d.mainProd[mid])}</span></span>`;
       }
       html += `</div>`;
     }
+
+    // Podliczniki — osobna sekcja, wyraźnie oddzielona
+    const subConsIds = Object.keys(d.subCons);
+    const subProdIds = Object.keys(d.subProd);
+    if (subConsIds.length > 0 || subProdIds.length > 0) {
+      html += `<div style="margin-top:10px;border-top:1px solid var(--border);padding-top:8px;">`;
+      html += `<div style="font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">Podliczniki (fragment zużycia głównego)</div>`;
+      html += `<div style="display:flex;flex-wrap:wrap;gap:6px;">`;
+      for (const mid of subConsIds) {
+        const m = state.meters.find(x=>x.id===mid);
+        if (m) html += `<span style="font-size:11px;background:var(--bg4);border:1px solid var(--border);border-radius:6px;padding:3px 8px;font-family:'JetBrains Mono',monospace;opacity:0.8">${m.name}: <span style="color:var(--accent)">${fmtKwh(d.subCons[mid])}</span></span>`;
+      }
+      for (const mid of subProdIds) {
+        const m = state.meters.find(x=>x.id===mid);
+        if (m) html += `<span style="font-size:11px;background:var(--bg4);border:1px solid var(--border);border-radius:6px;padding:3px 8px;font-family:'JetBrains Mono',monospace;opacity:0.8">${m.name}: <span style="color:var(--amber)">${fmtKwh(d.subProd[mid])}</span></span>`;
+      }
+      html += `</div></div>`;
+    }
+
     html += `</div>`;
   }
   container.innerHTML = html;
@@ -617,6 +893,7 @@ function renderManage() {
     <div class="manage-item">
       <div class="manage-item-info">
         <div class="manage-item-name">${m.name} ${typeBadge(m.type)}</div>
+        <div class="manage-item-type">ID: ${m.id}</div>
       </div>
       <div style="display:flex;gap:6px;">
         <button class="btn btn-sm" onclick="editMeter('${m.id}')">Edytuj</button>
@@ -647,7 +924,7 @@ function saveEditMeter() {
 }
 
 function deleteMeter(id) {
-  if (!confirm('Usunąć ten licznik? Wpisy pozostaną w historii, ale ukryjemy go z widoku wpisywania.')) return;
+  if (!confirm('Usunąć ten licznik? Dane historyczne z nim związane zostaną zachowane.')) return;
   state.meters = state.meters.filter(m=>m.id!==id);
   saveState();
   renderManage();
@@ -659,37 +936,102 @@ function addMeter() {
   const name = document.getElementById('new-meter-name').value.trim();
   const type = document.getElementById('new-meter-type').value;
   if (!name) { showToast('Podaj nazwę!'); return; }
-  
   const id = 'm' + Date.now();
   state.meters.push({ id, name, type });
   saveState();
-  document.getElementById('new-meter-name').value = '';
   renderManage();
   renderWpis();
+  document.getElementById('new-meter-name').value = '';
   showToast('Licznik dodany ✓');
 }
 
-// GUI i nawigacja
-function openManage() { renderManage(); document.getElementById('modal-manage').style.display = 'flex'; }
-function openExport() { document.getElementById('modal-export').style.display = 'flex'; }
-function closeModal(id) { document.getElementById(id).style.display = 'none'; }
-
-function showToast(msg) {
-  const t = document.getElementById('toast');
-  t.innerText = msg;
-  t.classList.add('show');
-  setTimeout(() => t.classList.remove('show'), 3000);
+function openManage() {
+  renderManage();
+  document.getElementById('modal-manage').style.display = 'flex';
 }
 
-function switchTab(e, tabId) {
-  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-  e.target.classList.add('active');
-  document.getElementById('tab-' + tabId).classList.add('active');
-  
-  if (tabId === 'historia') renderHistoria();
-  if (tabId === 'tygodnie') renderWeeks();
-  if (tabId === 'miesiace') { populateYearSelect(); renderMonths(); }
+function openExport() {
+  document.getElementById('import-area').value = '';
+  document.getElementById('modal-export').style.display = 'flex';
+}
+
+function closeModal(id) {
+  document.getElementById(id).style.display = 'none';
+}
+
+function exportData(format) {
+  const exportObj = { meters: state.meters, entries: state.entries, exportDate: new Date().toISOString() };
+  if (format === 'json') {
+    const blob = new Blob([JSON.stringify(exportObj, null, 2)], {type:'application/json'});
+    download(blob, 'licznik-pradu.json');
+  } else {
+    let txt = `LICZNIK PRĄDU — EKSPORT ${new Date().toLocaleString('pl-PL')}\n${'='.repeat(60)}\n\n`;
+    txt += `LICZNIKI:\n`;
+    for (const m of state.meters) txt += `  ${m.name} [${m.type}] (${m.id})\n`;
+    txt += `\nWPISY:\n`;
+    const dates = Object.keys(state.entries).sort();
+    for (const date of dates) {
+      txt += `\n${date}:\n`;
+      const entry = state.entries[date];
+      for (const m of state.meters) {
+        const v = entry[m.id];
+        const delta = getDelta(m.id, date);
+        txt += `  ${m.name}: ${v !== undefined ? v : '—'} kWh`;
+        if (delta !== null) txt += `  (${delta > 0 ? '+' : ''}${delta.toFixed(2)} kWh)`;
+        txt += '\n';
+      }
+    }
+    const blob = new Blob([txt], {type:'text/plain;charset=utf-8'});
+    download(blob, 'licznik-pradu.txt');
+  }
+}
+
+function download(blob, filename) {
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = filename;
+  a.click();
+  setTimeout(()=>URL.revokeObjectURL(a.href), 1000);
+  showToast('Eksportowano ✓');
+}
+
+function importData() {
+  const raw = document.getElementById('import-area').value.trim();
+  if (!raw) { showToast('Wklej dane JSON!'); return; }
+  try {
+    const parsed = JSON.parse(raw);
+    if (!parsed.meters || !parsed.entries) throw new Error('Nieprawidłowy format');
+    if (!confirm('Import zastąpi WSZYSTKIE obecne dane. Kontynuować?')) return;
+    state.meters = parsed.meters;
+    state.entries = parsed.entries;
+    saveState();
+    renderWpis();
+    renderHistoria();
+    populateYearSelect();
+    closeModal('modal-export');
+    showToast('Import zakończony pomyślnie ✓');
+  } catch(e) {
+    showToast('Błąd: nieprawidłowy plik JSON');
+  }
+}
+
+function clearConfirm() {
+  if (!confirm('Usunąć WSZYSTKIE wpisy? Liczniki zostaną zachowane.')) return;
+  state.entries = {};
+  saveState();
+  renderHistoria();
+  renderWpis();
+  showToast('Wpisy wyczyszczone');
+}
+
+function switchTab(tab) {
+  document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById('tab-'+tab).classList.add('active');
+  event.target.classList.add('active');
+  if (tab === 'historia') renderHistoria();
+  if (tab === 'tygodnie') renderWeeks();
+  if (tab === 'miesiace') { populateYearSelect(); renderMonths(); }
 }
 
 function setToday() {
@@ -697,54 +1039,20 @@ function setToday() {
   renderWpis();
 }
 
-// LOGIKA EKSPORTU DO PLIKU
-function exportDataJSON() {
-  const dataStr = JSON.stringify(state, null, 2);
-  const blob = new Blob([dataStr], { type: "application/json" });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = `licznik_pradu_${getToday()}.json`;
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
-  URL.revokeObjectURL(url);
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'), 2500);
 }
 
-// LOGIKA IMPORTU Z PLIKU
-function importDataFromFile() {
-  const fileInput = document.getElementById('import-file');
-  if (!fileInput.files || fileInput.files.length === 0) {
-    showToast('Wybierz plik JSON z dysku!');
-    return;
-  }
-  const file = fileInput.files[0];
-  const reader = new FileReader();
-  reader.onload = function(e) {
-    try {
-      const imported = JSON.parse(e.target.result);
-      if (imported && imported.meters && imported.entries) {
-        state = imported;
-        saveState();
-        renderWpis();
-        closeModal('modal-export');
-        showToast('Dane zaimportowane ✓');
-      } else {
-        showToast('Nieprawidłowy format pliku JSON!');
-      }
-    } catch (err) {
-      showToast('Wystąpił błąd odczytu pliku!');
-    }
-  };
-  reader.readAsText(file);
-}
-
-// Start
-document.addEventListener('DOMContentLoaded', () => {
-  loadState();
-  document.getElementById('date-input').value = getToday();
-  renderWpis();
+document.getElementById('date-input').addEventListener('change', renderWpis);
+document.querySelectorAll('.modal-overlay').forEach(m => {
+  m.addEventListener('click', e => { if (e.target === m) m.style.display='none'; });
 });
+
+loadState();
+setToday();
 </script>
 </body>
 </html>
